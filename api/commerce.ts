@@ -20,13 +20,15 @@ export const PRODUCTS: Product[] = [
     sku: "STP-COPY-20LB",
     name: "Staples Copy Paper – 20 lb. – 5000 Sheets",
     price: 84.99,
-    image: "https://example.com/copy-paper.jpg"
+    image: "https://example.com/copy-paper.jpg",
+    description: "Reliable copy paper for everyday office use."
   },
   {
     sku: "STP-MULTI-20LB",
     name: "Staples Multisuse Paper – 20 lb. – 5000 Sheets",
     price: 97.99,
-    image: "https://example.com/multipurpose-paper.jpg"
+    image: "https://example.com/multipurpose-paper.jpg",
+    description: "Reliable copy paper for everyday office use."
   }
 ];
 
