@@ -88,7 +88,7 @@ function cardForState(state: CommerceState) {
 
     case CommerceStep.PRODUCT_DETAIL: {
       const product = PRODUCTS.find(p => p.sku === state.sku);
-      return product ? productDetailCard(product) : [];
+      return product ? productDetailCard(product) : undefined;
     }
 
     case CommerceStep.CHECKOUT_REVIEW: {
@@ -107,7 +107,7 @@ function cardForState(state: CommerceState) {
     }
 
     case CommerceStep.ORDER_COMPLETE:
-      return orderCompleteCard("https://www.staples.ca/order/12345");
+      return null;
 
     default:
       return null;
