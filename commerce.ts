@@ -1,5 +1,3 @@
-
-
 // TODO: replace with Foundry SDK client
 async function callFoundry(message: string) {
   // This is where you call your Foundry agent
