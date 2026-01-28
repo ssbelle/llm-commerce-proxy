@@ -1,3 +1,5 @@
+import { CommerceStep } from "./commerceSteps";
+
 export type CommerceState = {
   step: CommerceStep;
   sku?: string;
