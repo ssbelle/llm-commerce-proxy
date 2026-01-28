@@ -34,7 +34,7 @@ export function productDetailCard(product: {
     actions: [
       {
         type: "Action.Submit",
-        title: "Add to cart",
+        title: "Easy Buy",
         data: {
           action: "ADD_TO_CART",
           sku: product.sku,
