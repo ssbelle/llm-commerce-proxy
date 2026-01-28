@@ -12,7 +12,7 @@ export type Product = {
   name: string;
   price: number;
   image: string;
-  description: string;
+  description?: string;
 };
 
 export const PRODUCTS: Product[] = [
