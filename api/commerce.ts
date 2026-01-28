@@ -6,23 +6,6 @@ import { productDetailCard } from "../cards/productDetail.card";
 import { checkoutReviewCard } from "../cards/checkoutReview.card";
 import { orderCompleteCard } from "../cards/orderComplete.card";
 
-// ---- Mock data (replace later with Foundry / backend calls)
-const PRODUCTS = [
-  {
-    sku: "PAPER-001",
-    name: "Staples Copy Paper – 20 lb",
-    price: 84.99,
-    image: "https://example.com/paper.jpg",
-    description: "Reliable copy paper for everyday office use."
-  },
-  {
-    sku: "PAPER-002",
-    name: "Staples Multiuse Paper – 20 lb",
-    price: 97.99,
-    image: "https://example.com/multiuse.jpg",
-    description: "Versatile paper for printers and copiers."
-  }
-];
 
 // ---- State transition logic (THE BRAIN)
 function transitionState(
