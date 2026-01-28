@@ -48,7 +48,16 @@ function transitionState(
         };
       }
       return state;
-
+      
+    case CommerceStep.ORDER_COMPLETE:
+      return res.status(200).json({
+        adaptiveCard: orderCompleteCard({
+          orderId: "ORD-12345",
+          ...state,
+         
+        })
+      });
+      
     default:
       return state;
   }
