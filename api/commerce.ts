@@ -1,3 +1,9 @@
+import { CommerceStep } from "../domain/commerceSteps";
+
+const state = {
+  step: CommerceStep.SEARCH_RESULTS
+};
+
 export const config = {
   runtime: "nodejs"
 };
