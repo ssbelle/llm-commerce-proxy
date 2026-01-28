@@ -1,10 +1,10 @@
-export function cartReviewCard(cart: {
+export function checkoutReviewCard(cart: {
   sku: string;
   name: string;
   qty: number;
   price: number;
 }[]) {
-  const total = cart.reduce((s, i) => s + i.qty * i.price, 0);
+  const total = cart.reduce((sum, i) => sum + i.qty * i.price, 0);
 
   return {
     type: "AdaptiveCard",
@@ -12,27 +12,30 @@ export function cartReviewCard(cart: {
     body: [
       {
         type: "TextBlock",
-        text: "Your cart",
+        text: "Review your order",
         weight: "Bolder",
         size: "Medium"
       },
-      ...cart.map(i => ({
+
+      ...cart.map(item => ({
         type: "TextBlock",
-        text: `${i.qty} × ${i.name} — $${i.price * i.qty}`,
+        text: `${item.qty} × ${item.name} — $${item.qty * item.price}`,
         wrap: true
       })),
+
       {
         type: "TextBlock",
         text: `Total: $${total}`,
-        weight: "Bolder"
+        weight: "Bolder",
+        spacing: "Medium"
       }
     ],
     actions: [
       {
         type: "Action.Submit",
-        title: "Checkout",
+        title: "Place order",
         data: {
-          action: "CHECKOUT"
+          action: "CONFIRM_ORDER"
         }
       }
     ]
