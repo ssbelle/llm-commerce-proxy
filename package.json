@@ -11,6 +11,5 @@
   "description": "",
   "dependencies": {
     "openai": "^6.16.0",
-    "@vercel/node": "^3.0.0"
   }
 }
