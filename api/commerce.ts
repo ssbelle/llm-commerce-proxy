@@ -6,6 +6,14 @@ import { productDetailCard } from "../cards/productDetail.card";
 import { checkoutReviewCard } from "../cards/checkoutReview.card";
 import { orderCompleteCard } from "../cards/orderComplete.card";
 
+
+export type Product = {
+  sku: string;
+  name: string;
+  price: number;
+  image: string;
+};
+
 export const PRODUCTS: Product[] = [
   {
     sku: "STP-COPY-20LB",
@@ -63,14 +71,6 @@ function transitionState(
       }
       return state;
       
-    case CommerceStep.ORDER_COMPLETE:
-      return res.status(200).json({
-        adaptiveCard: orderCompleteCard({
-          orderId: "ORD-12345",
-          ...state,
-         
-        })
-      });
       
     default:
       return state;
