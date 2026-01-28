@@ -34,17 +34,32 @@ export default async function handler(req: any, res: any) {
   console.log("COPILOT → VERCEL PROXY:", message);
 
   return res.status(200).json({
-    message: `Foundry received: ${message}`,
-    adaptiveCard: {
-      type: "AdaptiveCard",
-      version: "1.5",
-      body: [
-        {
-          type: "TextBlock",
-          text: "This response came from Vercel",
-          weight: "Bolder"
-        }
-      ]
-    }
-  });
+  adaptiveCard: {
+    type: "AdaptiveCard",
+    version: "1.5",
+    body: [
+      {
+        type: "TextBlock",
+        text: "✅ Adaptive Card from Vercel",
+        size: "Large",
+        weight: "Bolder"
+      },
+      {
+        type: "ActionSet",
+        actions: [
+          {
+            type: "Action.Submit",
+            title: "Add to Cart",
+            data: {
+              action: "ADD_TO_CART",
+              sku: "SKU-123"
+            }
+          }
+        ]
+      }
+    ]
+  }
+})
+
+  
 }
