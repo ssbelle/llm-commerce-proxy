@@ -86,7 +86,7 @@ function cardForState(state: CommerceState) {
 
     case CommerceStep.PRODUCT_DETAIL: {
       const product = PRODUCTS.find(p => p.sku === state.sku);
-      return product ? productDetailCard(product) : null;
+      return product ? productDetailCard(product) : Product[null];
     }
 
     case CommerceStep.CHECKOUT_REVIEW: {
