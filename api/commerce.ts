@@ -1,6 +1,9 @@
+export const config = {
+  runtime: "nodejs"
+};
+
 // TODO: replace with Foundry SDK client
 async function callFoundry(message: string) {
-  // This is where you call your Foundry agent
   return {
     message: `Foundry received: ${message}`,
     adaptiveCard: {
@@ -17,7 +20,6 @@ async function callFoundry(message: string) {
   };
 }
 
-
 export default async function handler(req: any, res: any) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method Not Allowed" });
@@ -31,7 +33,6 @@ export default async function handler(req: any, res: any) {
 
   console.log("COPILOT → VERCEL PROXY:", message);
 
-  // Stub response (Foundry wiring comes next)
   return res.status(200).json({
     message: `Foundry received: ${message}`,
     adaptiveCard: {
