@@ -3,7 +3,7 @@ export function productDetailCard(product: {
   name: string;
   price: number;
   image: string;
-  description: string;
+  description?: string;
 }) {
   return {
     type: "AdaptiveCard",
